@@ -25,6 +25,8 @@
     <meta name="keywords" content="meals, reading, fiction, non-fiction, meal_type, reviews">
     <meta name="restaurant" content="Dima">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title> Food Review Database </title>
     
     <!-- Edit the link below / replace with your chosen google font -->
     <link href="https://fonts.googleapis.com/css?family=Lato%7cUbuntu" rel="stylesheet"> 
@@ -76,7 +78,7 @@
 
         <!--- Start of Dish name Search -->
             
-        <form method ="post" action ="dish_name_search.php" enchtype="multipart/form-data">
+        <form method ="post" action ="dish_name_search.php" enctype="multipart/form-data">
 
             <input class="search" type="text" name="dish_name" size="40" value="" required placeholder = "Dish name..."/>
 
@@ -90,9 +92,9 @@
 
         <!--- Start of Restaurant Search -->
             
-        <form method ="post" action ="restaurant_search.php" enchtype="multipart/form-data">
+        <form method ="post" action ="restaurant_search.php" enctype="multipart/form-data">
 
-            <input class="search" type="restaurant" name="restaurant" size="40" value="" required placeholder = "Restaurant..."/>
+            <input class="search" type="text" name="restaurant" size="40" value="" required placeholder = "Restaurant..."/>
 
             <input class ="submit" type="submit" name="find_restaurant" value="Search" />
 
@@ -104,7 +106,7 @@
 
         <!--- Start of Meal type Search -->
             
-        <form method ="post" action ="meal_type_search.php" enchtype="multipart/form-data">
+        <form method ="post" action ="meal_type_search.php" enctype="multipart/form-data">
 
             <select name="meal_type" required>
 
@@ -113,6 +115,8 @@
                 <option value="Lunch">Lunch</option>
                 <option value="Dinner">Dinner</option>
                 <option value="Dessert">Dessert</option>
+
+            </select>
                     
             <input class ="submit" type="submit" name="find_meal_type" value="Search" />
 
@@ -149,10 +153,10 @@
         <hr/>
 
         <!-- Is vegetarian -->
-        <form method="post" action="vegetarian_search.php" enchtype="multipart/form-data">  
+        <form method="post" action="vegetarian_search.php" enctype="multipart/form-data">  
 
             <label class= "half_width" for="vegetarian">Vegetarian</label>
-            <input class= "half_width"type="checkbox" class="search" name="vegetarian" value="" required />
+            <input class= "half_width" type="checkbox" name="vegetarian" id= "vegetarian" value="" required />
 
             <input class ="submit" type="submit" name="find_vegetarian" value="Search" />
 
